@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/result.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Klee+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One">
+
+  </head>
+  <body>
+    <h1 id = "title">Prediction</h1>
+
+    <div class="card"> 
+      <p>這封郵件有</p>
+      <p style="text-align: center;"><span id="Result">{{ result }} %</span></p>
+      <p style="text-align: right;"> 的機率是釣魚郵件</p>
+    </div>
+    {% if result >= 0.8 %}
+      <img src="{% static 'Image/redemail.png' %}" id="email">
+    {% endif %}
+
+    {% if result >= 0.5 and  result < 0.8 %}
+      <img src="{% static 'Image/yellowemail.png' %}" id="email">
+    {% endif %}
+
+    {% if result < 0.5 %}
+      <img src="{% static 'Image/greenemail.png' %}" id="email">
+    {% endif %}
+    
+    <div class="waveWrapper waveAnimation">
+      <div class="waveWrapperInner bgTop">
+        <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgMiddle">
+        <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgBottom">
+        <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+      </div>
+    </div>
+  </body>
+</html>

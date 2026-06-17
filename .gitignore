@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual env
+venv/
+
+# DB
+db.sqlite3
+
+# Logs / temp
+*.log
+*.tmp
+symboltmp.txt
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+*.pickle

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/index.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Klee+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One">
+
+  </head>
+  <body>
+    <h1 id="title">Phishing Email Detection</h1>  
+    <div class="card">
+      
+      <form action="{% url 'result' %}" class="Input">
+        {% csrf_token %}
+        
+        <p id="subtit">輸入 symbol ， 每個 symbol 以空格格開 : </p>
+        <textarea id="input_symbol" type="text" name="inpt_symbol" placeholder="symbol"></textarea>
+        <br>
+        <input class="btn"  type="submit" value='send'>
+      </form>
+    </div>
+    
+
+    <div class="waveWrapper waveAnimation">
+      <div class="waveWrapperInner bgTop">
+        <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgMiddle">
+        <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgBottom">
+        <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+      </div>
+    </div>
+  </body>
+</html>
