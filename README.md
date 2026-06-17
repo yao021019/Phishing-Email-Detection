@@ -55,4 +55,7 @@ A Django-based web application that uses a Random Forest Classifier to detect ph
 
 ## Model Details
 
-The application uses a Random Forest model trained on various email features (symbols) such as `ARC_NA`, `ASN`, `BAYES_SPAM`, etc. The model outputs a probability, which is then used to classify the email.
+The application uses a Random Forest model trained on various email features (symbols). 
+
+**Note**: The pre-trained model file `RandomForestClassifier_20231121.pickle` is not included in this repository due to its large size (~1.2 GB). You will need to provide this file in the `symbol_predict/` directory for the application to function correctly.
+
